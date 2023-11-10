@@ -1,0 +1,152 @@
+/* navbar */
+.navbar{
+    background-color: #EFF8FC;
+    z-index: 100;
+}
+
+/* start header*/
+.header_about_us {
+    position: relative;
+}
+.header_about_us .background-header {
+    background-color: #EFF8FC;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+.header_about_us .background-header h2{
+    margin: 0;
+    font-size: 1rem;
+}
+.header_about_us .background-header p{
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.header_about_us .banner-curve {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-image: url(../imgs/wave.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 100%;
+    z-index: 2;
+    transform: rotateX(0deg) rotateY(180deg);
+}
+
+/* end header*/
+
+/* Start Why choose HET */
+.Why-choose-het{
+    position: relative;
+    margin: 40px auto;
+}
+.Why-choose-het .container{
+    position: relative;
+}
+.Why-choose-het .container .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Why-choose-het .container .content>div{
+    width: 47%;
+    position: relative;
+}
+.content .picture-why-choose{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.content .picture-why-choose span{
+    width: 50px;
+    height: 700px;
+    background-color: #e4e4e437;
+    position: absolute;
+    z-index: 1;
+    transition: var(--main-transition);
+    top: 0;
+    right: -20%;
+}
+.content .picture-why-choose:hover span{
+    width: 1000px;
+}
+
+.content .picture-why-choose img{
+    position: relative;
+    width: 100%;
+    transition: var(--main-transition);
+    border-radius: 0px 15px 15px 0px;
+}
+.content .content-why-choose{
+    margin-right: 50px;
+    position: relative;
+}
+.content-why-choose .title-why-choose {
+    display: flex;
+    align-items: center;
+}
+.content-why-choose .title-why-choose h3{
+    color: var(--main-color-alt);
+    margin: 0px 10px;
+}
+.content-why-choose .title-why-choose span{
+    background-color: var(--main-color-alt);
+    width: 20px;
+    height: 4px;
+}
+.content-why-choose .dis-title-section {
+    position: relative;
+    width: 100%;
+}
+.content-why-choose .dis-title-section p{
+    font-size: 1.7rem;
+    font-weight: 900;
+    width: 100%;
+    color: #000000;
+}
+.content-why-choose .list-choose {
+    width: 100%;
+}
+.content-why-choose .list-choose .list-choose-one{
+    display: flex;
+    position: relative;
+}
+.content-why-choose .list-choose .list-choose-one img{
+    background-color: var(--main-color-alt);
+    width:  30px;
+    height: 30px;
+    margin-top: 35px;
+    padding: 6px;
+    border-radius: 50%;
+}
+.content-why-choose .list-choose .list-choose-one div{
+    margin-right: 25px;
+}
+.content-why-choose .list-choose .list-choose-one .title-choose-one{
+    color: #000;
+    margin: 0px;
+    margin-top: 30px;
+}
+.content-why-choose .list-choose .list-choose-one .text-choose-one{
+    color: #2d2d2d;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 991px) {
+    .Why-choose-het .container .content>div{
+        width: 100%;
+    }
+    .content .content-why-choose{
+        margin: 20px auto;
+    }
+}
+/* End Why choose HET */

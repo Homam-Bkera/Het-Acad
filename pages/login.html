@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logIn</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/log-sign-in.css">
+
+</head>
+
+<body>
+    <!-- Start navbar -->
+    <div class="navbar">
+        <div class="container">
+            <div class="btn-nav-menu-open" onclick="openNav()">
+                <span></span>
+            </div>
+            <a href="../index.HTML">
+                <img class="logo" src="../imgs/logo.png" alt="Het Acad Platform">
+            </a>
+            <ul class="main-nav">
+                <li>
+                    <a href="../index.HTML"><img src="../imgs/icon-home.png" alt=""></a>
+                    <span>الرئيسية</span>
+                </li>
+                <li>
+                    <a href="../pages/all-courses.html"><img src="../imgs/icon-courses.png" alt=""></a>
+                    <span>الدورات</span>
+                </li>
+                <li class="li-dropdown">
+                    <a><img src="../imgs/icon-Pages.png" alt=""></a>
+                    <span>الصفحات</span>
+                    <div class="dropdown">
+                        <a class="item-dropdown" href="../pages/about-us.html">من نحن</a>
+                        <a class="item-dropdown" href="../pages/static-page.html">اتفاق السرية</a>
+                        <a class="item-dropdown" href="../pages/new-article.html">أحدث المقالات</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="../pages/content-us.html"><img src="../imgs/icon-contact-us.png" alt=""></a>
+                    <span>اتصل بنا</span>
+                </li>
+            </ul>
+            <div class="register">
+                <a class="button" href="../pages/login.html">تسجيل دخول</a>
+                <a class="button" href="../pages/signin.html">انشاء حساب</a>
+            </div>
+            
+            <div class="main-nav-mobile main-nav-mobile-close " id="main-nav-mobile">
+                <div class="btn-nav-menu-close" onclick="closeNav()">
+                    <span></span>
+                </div>
+                <ul>
+                    <li>
+                        <img src="../imgs/icon-home.png" alt="">
+                        <a href="../index.HTML">الرئيسية</a>
+                    </li>
+                    <li>
+                        <img src="../imgs/icon-courses.png" alt="">
+                        <a href="../pages/all-courses.html">الدورات</a>
+                    </li>
+                    <li onclick="dropdownRemove()">
+                        <img src="../imgs/icon-Pages.png" alt="">
+                        <a href="#">الصفحات</a>
+                    </li>
+                    <li class="dropdown-remove" id="dropdown">
+                        <a class="item-dropdown" href="../pages/about-us.html">من نحن</a>
+                        <a class="item-dropdown" href="../pages/static-page.html">اتفاق السرية</a>
+                        <a class="item-dropdown" href="../pages/new-article.html">أحدث المقالات</a>
+                    </li>
+                    <li>
+                        <img src="../imgs/icon-contact-us.png" alt="">
+                        <a href="../pages/content-us.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <form>
+                    <img src="../imgs/icon-search-.png" alt="">
+                    <input type="text" placeholder="بحث..">
+                </form>
+                <div class="register register-nav-mobile">
+                    <a class="button" href="../pages/login.html">تسجيل دخول</a>
+                    <a class="button" href="../pages/signin.html">انشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End navbar -->
+    <!-- Start Head login  -->
+    <div class="header_login">
+        <div class="background-header">
+            <div class="container">
+                <h2>تسجيل الدخول</h2>
+                <p>تسجيل الدخول إلى حسابك</p>
+            </div>
+        </div>
+        <div class="banner-curve"></div>
+    </div>
+    <!-- End Head login  -->
+
+    <!-- start form -->
+    <div class="form-login">
+        <div class="container">
+            <div class="title-form">
+                <span></span>
+                <h2>تسجيل الدخول</h2>
+                <span></span>
+            </div>
+            <div class="form">
+                <form>
+                    <div class="user-box user-box-input">
+                        <input type="text">
+                        <label>البريد الإلكتروني *</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="user-box user-box-input">
+                        <input type="text">
+                        <label>كلمة المرور *</label>
+                        <span class="line"></span>
+                    </div>
+                    <a href="./forgetPassword.html" class="forget-password">نسيت كلمة المرور</a>
+                    <div class="checkbox-input"><input type="checkbox">تذكرني</div>
+                    <button class="btn-big btn"> تسجيل </button>
+                    <div class="create-account">
+                        <a href="../pages/signin.html"> انشاء حساب</a>
+                    </div>
+                </form>
+                <div class="picture-form">
+                    <img src="../imgs/login.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end form -->
+
+    <!-- Start Footer section -->
+    <div class="footer">
+        <div class="container">
+
+            <div class="banner-curve"></div>
+            <div class="footer-content">
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <div class="footer-logo">
+                            <a class="footer-logo-link" href="#">
+                                <img src="../imgs/logo.png" alt="">
+                            </a>
+                        </div>
+                        <ul class="footer-menu-list list-logo">
+                            <li>
+                                <label>البريد الإلكتروني : </label>
+                                <br>
+                                <span>info@heteducation.com</span>
+                            </li>
+                            <li>
+                                <label>الهاتف : </label>
+                                <br>
+                                <span>0535 688 15 66</span>
+                            </li>
+                            <li>
+                                <label>العنوان :</label>
+                                <br>
+                                <span>Atikali, Atikali mahallesi fevzipaşa caddesi Bina 116 Daire 6,34093
+                                    Fatih/İstanbul</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">تصفح الدورات التعليمية </h2>
+                        <ul class="footer-menu-list">
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">دورة زوم ICDL </a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">دورة موشن جرافيك</a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">الشبكات ("Network") </a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">دبلوم الهكر الأخلاقي و اختبار الاختراق</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">YASAL UYARILAR</h2>
+                        <ul class="footer-menu-list">
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">KVKK Aydınlatma Metni </a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">Gizlilik Sözleşmesi</a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">İptal ve İade Koşulları</a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">Mesafeli Satış Sözleşmesi</a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">Çerez Bilgilendirme Metni</a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">Banka Hesap Bilgilerimiz</a>
+                            </li>
+                            <li class="courses">
+                                <img src="../imgs/icon-arrow.png" alt="">
+                                <a href="#">Hkkımızda</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-social-links">
+                    <svg class="footer-social-amoeba-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 54">
+                        <path class="footer-social-amoeba-path"
+                            d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
+                        </path>
+                    </svg>
+                    <div class="icons-social">
+                        <a href=""><img class="icon-facebook" src="../imgs/icon-facebook.png" alt=""></a>
+                        <a href=""><img class="icon-instagram" src="../imgs/icon-instagram.png" alt=""></a>
+                        <a href=""><img class="icon-linkedin" src="../imgs/icon-linkedin.png" alt=""></a>
+                        <a href=""><img class="icon-youtube" src="../imgs/icon-youtube.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <img class="logo-band" src="../imgs/logo_band_white3x.png" alt="">
+            </div>
+            <hr>
+            <div class="footer-copyright-wrapper">
+                <p class="footer-copyright-text">
+                    <a class="footer-copyright-link" href="#"> © 2023-2022 steps || جميع الحقوق محفوظة</a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="anmtoin-background">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- End Footer section -->
+    <script src="../js/main.js"></script>
+    <script>
+        
+        // animation for form
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animation-scrolling-form')
+                }
+            })
+        });
+        let contentForm = document.querySelectorAll('.form-login .form form');
+        for (let i = 0; i < contentForm.length; i++) {
+            const elements = contentForm[i];
+            observer.observe(elements);
+        }
+
+        // animation for picture form
+        const observer1 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animation-scrolling-picture')
+                }
+            })
+        });
+        let picture = document.querySelectorAll('.form-login .form .picture-form');
+        for (let i = 0; i < picture.length; i++) {
+            const elements = picture[i];
+            observer1.observe(elements);
+        }
+
+    </script>
+</body>
+
+</html>

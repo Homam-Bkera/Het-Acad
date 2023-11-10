@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Start navbar -->
+    <div class="navbar">
+        <div class="container">
+            <div class="btn-nav-menu-open" onclick="openNav()">
+                <span></span>
+            </div>
+            <a href="./index.HTML">
+                <img class="logo" src="imgs/logo.png" alt="Het Acad Platform">
+            </a>
+            <ul class="main-nav">
+                <li>
+                    <a href="./index.HTML"><img src="./imgs/icon-home.png" alt=""></a>
+                    <span>الرئيسية</span>
+                </li>
+                <li>
+                    <a href="./pages/all-courses.html"><img src="./imgs/icon-courses.png" alt=""></a>
+                    <span>الدورات</span>
+                </li>
+                <li class="li-dropdown">
+                    <a><img src="./imgs/icon-Pages.png" alt=""></a>
+                    <span>الصفحات</span>
+                    <div class="dropdown">
+                        <a class="item-dropdown" href="./pages/about-us.html">من نحن</a>
+                        <a class="item-dropdown" href="./pages/static-page.html">اتفاق السرية</a>
+                        <a class="item-dropdown" href="./pages/new-article.html">أحدث المقالات</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="./pages/content-us.html"><img src="./imgs/icon-contact-us.png" alt=""></a>
+                    <span>اتصل بنا</span>
+                </li>
+            </ul>
+            <div class="register">
+                <a class="button" href="pages/login.html">تسجيل دخول</a>
+                <a class="button" href="pages/signin.html">انشاء حساب</a>
+            </div>
+            
+            <div class="main-nav-mobile main-nav-mobile-close " id="main-nav-mobile">
+                <div class="btn-nav-menu-close" onclick="closeNav()">
+                    <span></span>
+                </div>
+                <ul>
+                    <li>
+                        <img src="imgs/icon-home.png" alt="">
+                        <a href="./index.HTML">الرئيسية</a>
+                    </li>
+                    <li>
+                        <img src="imgs/icon-courses.png" alt="">
+                        <a href="./pages/all-courses.html">الدورات</a>
+                    </li>
+                    <li onclick="dropdownRemove()">
+                        <img src="imgs/icon-Pages.png" alt="">
+                        <a href="#">الصفحات</a>
+                    </li>
+                    <li class="dropdown-remove" id="dropdown">
+                        <a class="item-dropdown" href="./pages/about-us.html">من نحن</a>
+                        <a class="item-dropdown" href="./pages/static-page.html">اتفاق السرية</a>
+                    </li>
+                    <li>
+                        <img src="imgs/icon-contact-us.png" alt="">
+                        <a href="./pages/content-us.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <form>
+                    <img src="imgs/icon-search-.png" alt="">
+                    <input type="text" placeholder="بحث..">
+                </form>
+                <div class="register register-nav-mobile">
+                    <a class="button" href="pages/login.html">تسجيل دخول</a>
+                    <a class="button" href="pages/signin.html">انشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End navbar -->
+
+    <!-- Start Landing -->
+    <div id="landing" class="landing">
+        <div class="container">
+            <div class="text">
+                <h2>اهلاً بك في منصتك المستقبلية</h2>
+                <p>ابحث في الدورة التدريبية
+                    دروس بإضافات جديدة تنشر كل شهر عبر المنصة</p>
+                <div class="subscribe">
+                    <form action="">
+                        <input type="text" placeholder="ابحث عن الدورة التدريبية المفضلة لديك" />
+                        <input type="submit" value="ابحث" />
+                    </form>
+                </div>
+            </div>
+            <div class="image">
+                <img src="imgs/landing.png" alt="" />
+            </div>
+        </div>
+        <div class="banner-curve"></div>
+    </div>
+    <!-- End Landing -->
+
+    <!-- Start categories -->
+    <div class="section-categories">
+        <div class="container">
+            <div class="title-section-categories">
+                <span></span>
+                <h2>اختر حسب الفئة </h2>
+                <span></span>
+            </div>
+            <div id="section-categories" class="all-section-categories">
+                <button class="category category-3">
+                    <div class="name-category">الهكر الأخلاقي</div>
+                    <div class="icon-category"><img src="imgs/icon-hacking.png" alt=""></div>
+                </button>
+                <button class="category category-2">
+                    <div class="name-category">استخدام الحاسوب</div>
+                    <div class="icon-category"><img src="imgs/icon-computer.png" alt=""></div>
+                </button>
+                <button class="category category-1">
+                    <div class="name-category">التصميم</div>
+                    <div class="icon-category"><img src="imgs/icon-design.png" alt=""></div>
+                </button>
+                <button class="category category-1">
+                    <div class="name-category">البرمجة</div>
+                    <div class="icon-category"><img src="imgs/icon-programe.png" alt=""></div>
+                </button>
+                <button class="category category-3">
+                    <div class="name-category">الشبكات</div>
+                    <div class="icon-category"><img src="imgs/icon-networks.png" alt=""></div>
+                </button>
+                <button id="showPopup" class="category category-2">
+                    <div class="name-category">جميع الدورات</div>
+                    <div class="icon-category"><img src="imgs/icon-all.png" alt=""></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="section-popup" class="section-popup-display-none">
+        <div class="content-popup">
+            <div class="header-popup">
+                <div class="close-popup">
+                    <span class="right-span"></span>
+                    <span class="left-span"></span>
+                </div>
+                <p class="title-popup">أختر الدورة حسب الفئتك المفضلة</p>
+            </div>
+            <div class="all-section-categories">
+                    <a href="#" class="category category-1">
+                        <div class="name-category">البرمجة</div>
+                        <div class="icon-category"><img src="imgs/icon-programe.png" alt=""></div>
+                    </a>
+                    <a href="#" class="category category-3">
+                        <div class="name-category">الشبكات</div>
+                        <div class="icon-category"><img src="imgs/icon-networks.png" alt=""></div>
+                    </a>
+                    <a href="#" class="category category-2">
+                        <div class="name-category">استخدام الحاسوب</div>
+                        <div class="icon-category"><img src="imgs/icon-computer.png" alt=""></div>
+                    </a>
+                    <a href="#" class="category category-2">
+                        <div class="name-category">الهكر الأخلاقي</div>
+                        <div class="icon-category"><img src="imgs/icon-hacking.png" alt=""></div>
+                    </a>
+                    <a href="#" class="category category-1">
+                        <div class="name-category">التصميم</div>
+                        <div class="icon-category"><img src="imgs/icon-design.png" alt=""></div>
+                    </a>
+            </div>
+            <div class="div-btn-popup">
+                <button class="btn-popup">إلغاء</button>
+            </div>
+        </div>
+    </div>
+    <!-- End categories -->
+
+    <!-- Start steps-register section -->
+    <div class="steps-register">
+        <div class="container">
+            <div class="title-steps">
+                <div class="title-top">
+                    <span class="right-span"></span>
+                    <h2>قم بالتسجيل</h2>
+                    <span class="left-span"></span>
+                </div>
+                <p>اتبع هذه الخطوات للتسجيل في المنصة</p>
+            </div>
+
+            <div class="bg-steps">
+                <img src="imgs/working-process-v1-shape1.png">
+            </div>
+            <div id="items-steps" class="items-steps">
+                <div class="item-step item-step-style-2 item-step-margin-1">
+                    <div class="count-step">1</div>
+                    <div class="icon-step">
+                        <span class="bg-icon-step"></span>
+                        <img class="icon-step-white" src="imgs/icon-user.png" alt="">
+                        <img class="icon-step-color-main" src="imgs/icon-user-main.png" alt="">
+                    </div>
+                    <div class="title-description-step">
+                        <a href="" class="title-step">قم بانشاء حساب</a>
+                        <!-- <p class="description-step">this section for description step</p> -->
+                    </div>
+                </div>
+                <div class="item-step item-step-style-1 item-step-margin-2">
+                    <div class="count-step">2</div>
+                    <div class="icon-step">
+                        <span class="bg-icon-step"></span>
+                        <img class="icon-step-white" src="imgs/icon-course.png" alt="">
+                        <img class="icon-step-color-main" src="imgs/icon-course-main.png" alt="">
+                    </div>
+                    <div class="title-description-step">
+                        <a href="" class="title-step"> تصفح الدورات المجانية</a>
+                        <!-- <p class="description-step">this section for description step</p> -->
+                    </div>
+                </div>
+                <div class="item-step item-step-style-2 item-step-margin-3">
+                    <div class="count-step">3</div>
+                    <div class="icon-step">
+                        <span class="bg-icon-step"></span>
+                        <img class="icon-step-white" src="imgs/icon-select.png" alt="">
+                        <img class="icon-step-color-main" src="imgs/icon-select-main.png" alt="">
+                    </div>
+                    <div class="title-description-step">
+                        <a href="" class="title-step"> تصفح الدورات المدفوعة</a>
+                        <!-- <p class="description-step">this section for description step</p> -->
+                    </div>
+                </div>
+                <div class="item-step item-step-style-1 item-step-margin-4">
+                    <div class="count-step">4</div>
+                    <div class="icon-step">
+                        <span class="bg-icon-step"></span>
+                        <img class="icon-step-white" src="imgs/icon-success.png" alt="">
+                        <img class="icon-step-color-main" src="imgs/icon-success-main.png" alt="">
+                    </div>
+                    <div class="title-description-step">
+                        <a href="" class="title-step">استمر بالنجاح</a>
+                        <!-- <p class="description-step">this section for description step</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End steps-register section -->
+
+    <!-- Start courses section -->
+    <div class="courses">
+        <div class="banner-curve"></div>
+        <img class="bg-courses-1" src="imgs/HET ACAD-01.png" alt="">
+        <div class="container">
+            <img class="bg-courses-2" src="imgs/HET ACAD-02.png" alt="">
+            <div class="main-title-courses">
+                <span></span>
+                <h2>الدورات التعليمية</h2>
+                <span></span>
+            </div>
+            <div class="categories">
+                <button data-category=".all" class="category-active category">
+                    <img src="imgs/icon-all.png" alt="">
+                    <span>جميع الدورات</span>
+                </button>
+                <button data-category=".using-computer" class="category">
+                    <img src="imgs/icon-computer.png" alt="">
+                    <span>استخدام الحاسوب</span>
+                </button>
+                <button data-category=".hacking" class="category">
+                    <img src="imgs/icon-hacking.png" alt="">
+                    <span>الهكر الأخلاقي</span>
+                </button>
+                <button data-category=".design" class="category">
+                    <img src="imgs/icon-design.png" alt="">
+                    <span>التصميم</span>
+                </button>
+                <button data-category=".network" class="category">
+                    <img src="imgs/icon-networks.png" alt="">
+                    <span>الشبكات</span>
+                </button>
+                <button data-category=".program" class="category">
+                    <img src="imgs/icon-programe.png" alt="">
+                    <span>البرمجة</span>
+                </button>
+            </div>
+            <div class="viewer-courses">
+
+                <a href="./pages/courses-details.html" class="viewer-course all hacking">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>الهكر الأخلاقي</span></p>
+                    <p class="price-course">100$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+                <a href="./pages/courses-details.html" class="viewer-course all using-computer">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>استخدام الحاسوب</span></p>
+                    <p class="price-course">45$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+                <a href="./pages/courses-details.html" class="viewer-course all hacking">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>الهكر الأخلاقي</span></p>
+                    <p class="price-course">7$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+                <a href="./pages/courses-details.html" class="viewer-course all design">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>تصميم</span></p>
+                    <p class="price-course">25$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+                <a href="./pages/courses-details.html" class="viewer-course all network">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>الشبكات</span></p>
+                    <p class="price-course">25$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+                <a href="./pages/courses-details.html" class="viewer-course all program">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>البرمجة</span></p>
+                    <p class="price-course">25$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+                <a href="./pages/courses-details.html" class="viewer-course all program">
+                    <div class="image-course"><img src="imgs/Network.jpg" alt=""></div>
+                    <div class="image-teacher-course"><img src="imgs/teacher 2.jpg" alt=""></div>
+                    <h4 class="name-teacher-course">Ali Hatip öğlu</h4>
+                    <span class="line-between"></span>
+                    <p class="title-course">دبلوم الهكر الأخلاقي و اختبار الاختراق</p>
+                    <p class="category-course">فئة الدورة: <span>البرمجة</span></p>
+                    <p class="price-course">25$</p>
+                    <div class="course-rate">
+                        <img src="imgs/icon-star-1.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                        <img src="imgs/icon-star.png" alt="">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- End courses section -->
+
+    <!-- Start  latest articles-->
+    <div class="latest-articles">
+        <div class="container">
+            <div class="articles">
+                <img class="image-main-article" src="imgs/artical-1.png" alt="" id="image-main-article-animation">
+                <img class="article-bg-1" src="imgs/article-bg-1.png" alt="">
+                <img class="article-bg-2" src="imgs/article-bg-2.png" alt="">
+                <img class="article-bg-3" src="imgs/article-bg-3.png" alt="">
+                <img class="article-bg-4" src="imgs/article-bg-4.png" alt="">
+                <div class="title-latest-articles">
+                    <span></span>
+                    <h2> أحدث المقالات</h2>
+                    <span></span>
+                </div>
+
+                <div class="article">
+                    <div id="article-content" class="article-content">
+                        <div class="article-title">الهكر الأخلاقي</div>
+                        <div class="article-description">هل تعلم ما هو الهكر الأخلاقي هل تعلم ما هو الهكر الأخلاقي هل
+                            تعلم ما هو الهكر الأخلاقي هل تعلم ما هو
+                            ما هو الهكر الأخلاقي هل تعلم ما هو الهكر الأخلاقي هل تعلم ما هو اما هو الهكر الأخلاقي هل
+                            تعلم ما هو الهكر الأخلاقي هل تعلم ما هو
+                            الهكر الأخلاقي</div>
+                        <a href="./pages/articles.html" class="read-more"><span class="style-text"></span><span
+                                class="text-content"> تابع
+                                قراءة المقال..</span></a>
+                        <div class="article-details-author">
+                            <div>
+                                <span>"</span>
+                            </div>
+                            <div class="details-author">
+                                <div class="name-author">Ali Hatip öğlu</div>
+                                <div class="date-article"> 27/3/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <div class="article-content">
+                        <div class="article-title">الشبكات و البرمجيات</div>
+                        <div class="article-description">هل تعلم ما هو الهكر الأخلاقي هل تعلم ما هو الهكر الأخلاقي هل
+                            تعلم ما هو الهكر الأخلاقي هل تعلم ما هو
+                            ما هو الهكر الأخلاقي هل تعلم ما هو الهكر الأخلاقي هل تعلم ما هو اما هو الهكر الأخلاقي هل
+                            تعلم ما هو الهكر الأخلاقي هل تعلم ما هو
+                            الهكر الأخلاقي</div>
+                        <a href="./pages/articles.html" class="read-more"><span class="style-text"></span><span
+                                class="text-content"> تابع
+                                قراءة المقال..</span></a>
+                        <div class="article-details-author">
+                            <div>
+                                <span>"</span>
+                            </div>
+                            <div class="details-author">
+                                <div class="name-author">Ali Hatip öğlu</div>
+                                <div class="date-article"> 27/3/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article">
+                    <div class="article-content">
+                        <div class="article-title">استخدام الحاسوب</div>
+                        <div class="article-description">هل تعلم ما هو الهكر الأخلاقي هل تعلم ما هو الهكر الأخلاقي هل
+                            تعلم ما هو الهكر الأخلاقي هل تعلم ما هو
+                            ما هو الهكر الأخلاقي هل تعلم ما هو الهكر الأخلاقي هل تعلم ما هو اما هو الهكر الأخلاقي هل
+                            تعلم ما هو الهكر الأخلاقي هل تعلم ما هو
+                            الهكر الأخلاقي</div>
+                        <a href="./pages/articles.html" class="read-more"><span class="style-text"></span><span
+                                class="text-content"> تابع
+                                قراءة المقال..</span></a>
+                        <div class="article-details-author">
+                            <div>
+                                <span>"</span>
+                            </div>
+                            <div class="details-author">
+                                <div class="name-author">Ali Hatip öğlu</div>
+                                <div class="date-article"> 27/3/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-btn" id="slider-btn"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End  latest articles-->
+
+    <!-- Start Best teachers section -->
+    <div class="best-teachers">
+        <div class="banner-curve"></div>
+        <div class="title">
+            <br>
+            <div class="main-title">
+                <span></span>
+                <h2>تعرف على أفضل المعلمين لدينا</h2>
+                <span></span>
+            </div>
+            <p>يعمل مدرسونا كل يوم لتقديم أفضل جودة تعليمية عبر الانترنت</p>
+        </div>
+        <div id="best-teachers-animation" class="container">
+            <div class="teachers-cards">
+
+                <div class="teacher-card">
+                    <div class="image-teacher">
+                        <span class="bg-image-teacher"></span>
+                        <img class="image-teacher-card" src="imgs/teacher 2.jpg" alt="">
+                    </div>
+                    <p class="name-teacher-card">Ali Hatip öğlu</p>
+                    <span class="job-teacher-card">Backend Developer</span>
+                </div>
+
+                <div class="teacher-card">
+                    <div class="image-teacher">
+                        <span class="bg-image-teacher"></span>
+                        <img class="image-teacher-card" src="imgs/teacher 2.jpg" alt="">
+                    </div>
+                    <p class="name-teacher-card">Ali Hatip öğlu</p>
+                    <span class="job-teacher-card">Backend Developer</span>
+                </div>
+
+                <div class="teacher-card">
+                    <div class="image-teacher">
+                        <span class="bg-image-teacher"></span>
+                        <img class="image-teacher-card" src="imgs/teacher 2.jpg" alt="">
+                    </div>
+                    <p class="name-teacher-card">Ali Hatip öğlu</p>
+                    <span class="job-teacher-card">Backend Developer</span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Best teachers section -->
+
+    <!-- Start Contact us section -->
+    <div class="container container-contact-us">
+        <img class="contact-us-bg-right" src="imgs/logo-2.png" alt="">
+        <div class="contact-us-title">
+            <span></span>
+            <h2>تواصل معنا</h2>
+            <span></span>
+        </div>
+        <div class="contact-form">
+            <div class="form">
+                <form id="form-animation">
+                    <div class="user-box user-box-input">
+                        <input type="text">
+                        <label>الاسم و الكنية *</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="user-box user-box-input">
+                        <input type="text">
+                        <label>البريد الالكتروني *</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="user-box user-box-input">
+                        <input type="text">
+                        <label>الهاتف *</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="user-box user-box-textarea">
+                        <textarea rows="4"></textarea>
+                        <label>اترك رسالتك هنا *</label>
+                        <span class="line"></span>
+                    </div>
+                    <button class="btn-big btn"> ارسل لنا <img src="imgs/icon-arrow 2.png"></img></button>
+                </form>
+            </div>
+            <div id="picture-form-animation" class="picture-form">
+                <img src="imgs/contact-us 3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Contact us section -->
+
+    <!-- Start Footer section -->
+    <div class="footer">
+        <div class="banner-curve"></div>
+        <div class="footer-content">
+
+            <div class="footer-content-column">
+                <div class="footer-menu">
+                    <div class="footer-logo">
+                        <a class="footer-logo-link" href="#">
+                            <img src="imgs/logo.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="footer-menu-list list-logo">
+                        <li>
+                            <label>البريد الإلكتروني : </label>
+                            <br>
+                            <span>info@heteducation.com</span>
+                        </li>
+                        <li>
+                            <label>الهاتف : </label>
+                            <br>
+                            <span>0535 688 15 66</span>
+                        </li>
+                        <li>
+                            <label>العنوان :</label>
+                            <br>
+                            <span>Atikali, Atikali mahallesi fevzipaşa caddesi Bina 116 Daire 6,34093
+                                Fatih/İstanbul</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-content-column">
+                <div class="footer-menu">
+                    <h2 class="footer-menu-name">تصفح الدورات التعليمية </h2>
+                    <ul class="footer-menu-list">
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">دورة زوم ICDL </a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">دورة موشن جرافيك</a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">الشبكات ("Network") </a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">دبلوم الهكر الأخلاقي و اختبار الاختراق</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-content-column">
+                <div class="footer-menu">
+                    <h2 class="footer-menu-name">YASAL UYARILAR</h2>
+                    <ul class="footer-menu-list">
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">KVKK Aydınlatma Metni </a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">Gizlilik Sözleşmesi</a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">İptal ve İade Koşulları</a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">Mesafeli Satış Sözleşmesi</a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">Çerez Bilgilendirme Metni</a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">Banka Hesap Bilgilerimiz</a>
+                        </li>
+                        <li class="courses">
+                            <img src="imgs/icon-arrow.png" alt="">
+                            <a href="#">Hkkımızda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social-links">
+                <svg class="footer-social-amoeba-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 54">
+                    <path class="footer-social-amoeba-path"
+                        d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
+                    </path>
+                </svg>
+                <div class="icons-social">
+                    <a href=""><img class="icon-facebook" src="imgs/icon-facebook.png" alt=""></a>
+                    <a href=""><img class="icon-instagram" src="imgs/icon-instagram.png" alt=""></a>
+                    <a href=""><img class="icon-linkedin" src="imgs/icon-linkedin.png" alt=""></a>
+                    <a href=""><img class="icon-youtube" src="imgs/icon-youtube.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <img class="logo-band" src="imgs/logo_band_white3x.png" alt="">
+            </div>
+            <hr>
+            <div class="footer-copyright-wrapper">
+                <p class="footer-copyright-text">
+                    <a class="footer-copyright-link" href="#"> © 2023-2022 steps || جميع الحقوق محفوظة</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="anmtoin-background">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- End Footer section -->
+
+    <!-- Script -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
